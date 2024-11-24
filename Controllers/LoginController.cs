@@ -8,7 +8,7 @@ namespace ETS_Go_ASP.Controllers
         // GET: Login
         public IActionResult Index()
         {
-            return View();
+            return View(new LoginModel());
         }
 
         // POST: Login
@@ -27,7 +27,6 @@ namespace ETS_Go_ASP.Controllers
                 else
                 {
                     TempData["ErrorMessage"] = "Invalid login attempt.";
-                    ModelState.AddModelError("", "Invalid login attempt.");
                 }
             }
 
